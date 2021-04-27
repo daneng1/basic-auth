@@ -16,7 +16,7 @@ userRouter.post('/signup', async (req, res) => {
   } catch (error) { console.error(error); res.status(403).send("Error creating User"); }
 });
 
-userRouter.post('/signin', auth, async (req, res) => {
+userRouter.post('/signin', auth, (req, res) => {
   res.status(200).json(req.user);
 });
 
